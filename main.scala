@@ -31,6 +31,10 @@ object Model {
 }
 
 object DB {
+  // To setup DDB locally, use one of these options:
+  // 1. https://hub.docker.com/r/amazon/dynamodb-local
+  // 2. NoSQL workbench has an option to start a local DDB
+  // 3. localstack
   import Model._
 
   implicit val jobSchema: Schema[Job] = Schema.record { field =>
